@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryLine.Utils", "StoryLine.Utils\StoryLine.Utils.csproj", "{B7F5A143-D3D7-4AE9-8F71-168B054BB311}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoryLine.Utils.Tests", "StoryLine.Utils.Tests\StoryLine.Utils.Tests.csproj", "{78194EDD-EDAE-4120-92BE-078D556B15F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7F5A143-D3D7-4AE9-8F71-168B054BB311}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7F5A143-D3D7-4AE9-8F71-168B054BB311}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7F5A143-D3D7-4AE9-8F71-168B054BB311}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7F5A143-D3D7-4AE9-8F71-168B054BB311}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78194EDD-EDAE-4120-92BE-078D556B15F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78194EDD-EDAE-4120-92BE-078D556B15F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78194EDD-EDAE-4120-92BE-078D556B15F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78194EDD-EDAE-4120-92BE-078D556B15F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
