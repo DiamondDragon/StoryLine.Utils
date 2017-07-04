@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <PackageLicenseUrl>https://github.com/DiamondDragon/StoryLine.Utils/blob/master/License.txt</PackageLicenseUrl>
     <Copyright>Andrei Salanoi &lt;diamond_dragon@tut.by&gt;</Copyright>
     <PackageProjectUrl>https://github.com/DiamondDragon/StoryLine.Utils</PackageProjectUrl>
@@ -21,10 +21,6 @@
     <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
     <PackageReference Include="StoryLine" Version="1.0.4" />
     <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Contracts\" />
   </ItemGroup>
   
 </Project>
