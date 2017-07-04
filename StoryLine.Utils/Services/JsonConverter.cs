@@ -5,7 +5,7 @@ using StoryLine.Utils.Contracts;
 
 namespace StoryLine.Utils.Services
 {
-    public class JsonConverter : ITextConverter
+    public class JsonConverter : IDataConverter
     {
         private readonly JsonSerializerSettings _settings = new JsonSerializerSettings
         {
@@ -22,10 +22,13 @@ namespace StoryLine.Utils.Services
             _settings = settings ?? throw new ArgumentNullException(nameof(settings));
         }
 
-        public object Convert(string text, Type type)
+        public object Convert(object data, Type type)
         {
             if (type == null)
                 throw new ArgumentNullException(nameof(type));
+
+            var text = data as string;
+
             if (string.IsNullOrEmpty(text))
                 throw new ArgumentException("Value cannot be null or empty.", nameof(text));
 
