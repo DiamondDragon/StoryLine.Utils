@@ -8,11 +8,11 @@ namespace StoryLine.Utils.Actions
     {
         private IDataConverter _converter;
         private Type _type;
-        private Func<object> _sourceProvider;
+        private object _source;
 
-        public Transform From(Func<object> sourceProvider)
+        public Transform From(object source)
         {
-            _sourceProvider = sourceProvider ?? throw new ArgumentNullException(nameof(sourceProvider));
+            _source = source ?? throw new ArgumentNullException(nameof(source));
 
             return this;
         }
@@ -44,7 +44,7 @@ namespace StoryLine.Utils.Actions
 
         public IAction Build()
         {
-            return new TransformAction(_type, _sourceProvider(), _converter);
+            return new TransformAction(_type, _source, _converter);
         }
     }
 }
