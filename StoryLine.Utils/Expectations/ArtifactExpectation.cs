@@ -24,7 +24,18 @@ namespace StoryLine.Utils.Expectations
             if (artifact == null)
                 throw new ExpectationException($"Artifact of type {typeof(TArtifact)} was not found.");
 
-            if (!_predicate(artifact))
+            bool result;
+
+            try
+            {
+                result = _predicate(artifact);
+            }
+            catch (Exception ex)
+            {
+                throw new ExpectationException(ex.Message, ex);
+            }
+
+            if (!result)
                 throw new ExpectationException($"Artifact of type {typeof(TArtifact)} doesn't match expectation.");
         }
     }
