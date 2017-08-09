@@ -5,18 +5,26 @@ namespace StoryLine.Utils.Actions
 {
     public class AddArtifact : IActionBuilder
     {
-        private object _value;
+        private Func<object> _valueFactory;
 
         public AddArtifact Value(object value)
         {
-            _value = value ?? throw new ArgumentNullException(nameof(value));
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
+            return Factory(() => value);
+        }
+
+        public AddArtifact Factory(Func<object> valueFactory)
+        {
+            _valueFactory = valueFactory ?? throw new ArgumentNullException(nameof(valueFactory));
 
             return this;
         }
 
         public IAction Build()
         {
-            return new AddArtifactAction(_value);
+            return new AddArtifactAction(_valueFactory);
         }
     }
 }
