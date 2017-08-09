@@ -5,11 +5,11 @@ namespace StoryLine.Utils.Actions
 {
     public class AddArtifactAction : IAction
     {
-        private readonly object _artifact;
+        private readonly Func<object> _valueFactory;
 
-        public AddArtifactAction(object artifact)
+        public AddArtifactAction(Func<object> valueFactory)
         {
-            _artifact = artifact ?? throw new ArgumentNullException(nameof(artifact));
+            _valueFactory = valueFactory ?? throw new ArgumentNullException(nameof(valueFactory));
         }
 
         public void Execute(IActor actor)
@@ -17,7 +17,7 @@ namespace StoryLine.Utils.Actions
             if (actor == null)
                 throw new ArgumentNullException(nameof(actor));
 
-            actor.Artifacts.Add(_artifact);
+            actor.Artifacts.Add(_valueFactory());
         }
     }
 }
